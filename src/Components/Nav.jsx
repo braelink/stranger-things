@@ -10,13 +10,13 @@ const Nav = () => {
   return (
     <div>
       <h1>Stranger's Things</h1>
-      <Link to="home">
+      <Link to="/home">
         <button>Home</button>
       </Link>
-      <Link to="posts">
+      <Link to="/posts">
         <button>Posts</button>
       </Link>
-      <Link to="login">
+      <Link to="/login">
         <button>Login</button>
       </Link>
     </div>
