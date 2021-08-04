@@ -11,7 +11,7 @@ const dummyPosts = [
 ];
 
 const NewPosts = (props) => {
-  //   console.log(props.match.params);
+  console.log(props.match.params);
   return (
     <div>
       {dummyPosts.map((singlePost) => (

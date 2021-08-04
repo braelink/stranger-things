@@ -1,4 +1,5 @@
 import "./App.css";
+import Register from "./Components/Register";
 import Login from "./Components/Login";
 import Nav from "./Components/Nav";
 import Home from "./Components/Home";
@@ -10,11 +11,11 @@ function App() {
     <div className="App">
       <Nav />
       <Switch>
+        <Route path="/register" component={Register} />
         <Route path="/login" component={Login} />
-
+        <Route path="/posts" component={NewPosts} />
         <Route path="/home" component={Home} />
       </Switch>
-      <NewPosts />
     </div>
   );
 }
