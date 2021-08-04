@@ -1,9 +1,9 @@
-import logo from "./logo.svg";
 import "./App.css";
 import Login from "./Components/Login";
 import Nav from "./Components/Nav";
 import Home from "./Components/Home";
 import { Switch, Route } from "react-router-dom";
+import NewPosts from "./Components/NewPosts";
 
 function App() {
   return (
@@ -14,6 +14,7 @@ function App() {
 
         <Route path="/home" component={Home} />
       </Switch>
+      <NewPosts />
     </div>
   );
 }

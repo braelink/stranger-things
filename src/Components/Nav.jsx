@@ -1,14 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const headerStyle = {
-  backgroundColor: "blue",
-  color: "white",
-};
+const possibleAutos = ["SUV", "Truck", "Car"];
 
 const Nav = () => {
   return (
-    <div>
+    <div id="nav">
       <h1>Stranger's Things</h1>
       <Link to="/home">
         <button>Home</button>
@@ -19,6 +16,12 @@ const Nav = () => {
       <Link to="/login">
         <button>Login</button>
       </Link>
+
+      {possibleAutos.map((pageName) => (
+        <Link to={`/new-posts/${pageName}`}>
+          <button>{pageName}Posts</button>
+        </Link>
+      ))}
     </div>
   );
 };
