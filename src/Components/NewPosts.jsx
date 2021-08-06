@@ -12,16 +12,11 @@ const dummyPosts = [
 
 const NewPosts = (props) => {
   console.log(props.match.params);
+
   return (
     <div>
       {dummyPosts.map((singlePost) => (
-        <div
-          style={{
-            padding: "3px",
-            backgroundColor: "lightgray",
-            margin: "15px",
-          }}
-        >
+        <div id="block">
           <h2>{singlePost.title}</h2>
           <h3>{singlePost.kind}</h3>
           <p>{singlePost.body}</p>

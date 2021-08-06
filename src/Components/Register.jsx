@@ -40,6 +40,7 @@ const Form = () => {
     <div>
       <h1>Please register</h1>
       <form style={formStyle} onSubmit={register}>
+        <label>* Username</label>
         <input
           type="text"
           value={user}
@@ -48,6 +49,7 @@ const Form = () => {
             setUser(e.target.value);
           }}
         ></input>
+        <label>* Password</label>
         <input
           type="text"
           value={pass}

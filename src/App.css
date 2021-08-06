@@ -44,3 +44,10 @@
   padding: 10px;
   background-color: lightblue;
 }
+
+#block {
+  display: grid;
+  padding: "3px";
+  margin: 15px;
+  background-color: lightgray;
+}
