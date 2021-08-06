@@ -38,8 +38,9 @@ const Form = () => {
 
   return (
     <div>
-      <h1>Please sing in</h1>
+      <h1>Please sign in</h1>
       <form style={formStyle} onSubmit={register}>
+        <label>* Username</label>
         <input
           type="text"
           value={user}
@@ -49,6 +50,7 @@ const Form = () => {
             // placeholder = "* password";
           }}
         ></input>
+        <label>* Password</label>
         <input
           type="text"
           value={pass}
