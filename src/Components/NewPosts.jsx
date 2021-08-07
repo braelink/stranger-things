@@ -26,4 +26,5 @@ const NewPosts = (props) => {
   );
 };
 
+
 export default NewPosts;

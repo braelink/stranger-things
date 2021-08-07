@@ -31,7 +31,8 @@ const Form = () => {
     )
       .then((response) => response.json())
       .then((result) => {
-        console.log(result);
+        console.log(result.data.token);
+        window.localStorage.setItem('token',result.data.token)
       })
       .catch(console.error);
   };
@@ -64,5 +65,4 @@ const Form = () => {
     </div>
   );
 };
-
 export default Form;
