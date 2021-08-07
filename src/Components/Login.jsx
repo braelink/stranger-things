@@ -11,7 +11,7 @@ const Form = () => {
     margin: 20,
   };
 
-  const register = (e) => {
+  const login = (e) => {
     e.preventDefault();
     console.log(user, pass);
     fetch(
@@ -31,7 +31,8 @@ const Form = () => {
     )
       .then((response) => response.json())
       .then((result) => {
-        console.log(result);
+        console.log(result.data.token);
+        window.localStorage.setItem('token',result.data.token)
       })
       .catch(console.error);
   };
@@ -39,19 +40,19 @@ const Form = () => {
   return (
     <div>
       <h1>Please sign in</h1>
-      <form style={formStyle} onSubmit={register}>
-        <label>* Username</label>
+      <form style={formStyle} onSubmit={login}>        
         <input
+          placeholder = '*username'
           type="text"
           value={user}
           onChange={(e) => {
             e.preventDefault();
-            setUser(e.target.value);
-            // placeholder = "* password";
+            setUser(e.target.value);  
           }}
         ></input>
-        <label>* Password</label>
+        
         <input
+        placeholder = '*password'
           type="text"
           value={pass}
           onChange={(e) => {
