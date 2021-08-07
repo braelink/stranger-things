@@ -8,7 +8,7 @@ const Form = () => {
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
-    margin: 20,
+    margin: "20px",
   };
 
   const register = (e) => {
@@ -32,7 +32,7 @@ const Form = () => {
       .then((response) => response.json())
       .then((result) => {
         console.log(result.data.token);
-        window.localStorage.setItem('token',result.data.token)
+        window.localStorage.setItem("token", result.data.token);
       })
       .catch(console.error);
   };
@@ -41,8 +41,8 @@ const Form = () => {
     <div>
       <h1>Please register</h1>
       <form style={formStyle} onSubmit={register}>
-        <label>* Username</label>
         <input
+          placeholder="*username"
           type="text"
           value={user}
           onChange={(e) => {
@@ -50,8 +50,8 @@ const Form = () => {
             setUser(e.target.value);
           }}
         ></input>
-        <label>* Password</label>
         <input
+          placeholder="*password"
           type="text"
           value={pass}
           onChange={(e) => {

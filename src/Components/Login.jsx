@@ -8,7 +8,7 @@ const Form = () => {
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
-    margin: 20,
+    margin: "20px",
   };
 
   const login = (e) => {
@@ -32,7 +32,7 @@ const Form = () => {
       .then((response) => response.json())
       .then((result) => {
         console.log(result.data.token);
-        window.localStorage.setItem('token',result.data.token)
+        window.localStorage.setItem("token", result.data.token);
       })
       .catch(console.error);
   };
@@ -40,19 +40,19 @@ const Form = () => {
   return (
     <div>
       <h1>Please sign in</h1>
-      <form style={formStyle} onSubmit={login}>        
+      <form style={formStyle} onSubmit={login}>
         <input
-          placeholder = '*username'
+          placeholder="*username"
           type="text"
           value={user}
           onChange={(e) => {
             e.preventDefault();
-            setUser(e.target.value);  
+            setUser(e.target.value);
           }}
         ></input>
-        
+
         <input
-        placeholder = '*password'
+          placeholder="*password"
           type="text"
           value={pass}
           onChange={(e) => {
