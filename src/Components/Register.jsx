@@ -39,7 +39,7 @@ const Form = () => {
 
   return (
     <div>
-      <h1>Please register</h1>
+      <h2>Please register</h2>
       <form style={formStyle} onSubmit={register}>
         <input
           placeholder="*username"

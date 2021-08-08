@@ -1,11 +1,7 @@
 import "./App.css";
-import Register from "./Components/Register";
-import Login from "./Components/Login";
-import Nav from "./Components/Nav";
-import Home from "./Components/Home";
 import { Switch, Route } from "react-router-dom";
-import NewPosts from "./Components/NewPosts";
 import { useEffect } from "react";
+import { Register, Login, Nav, Home, NewPosts, CreatePost } from "./Components";
 
 function App() {
   useEffect(() => {
@@ -38,6 +34,7 @@ function App() {
         <Route path="/login" component={Login} />
         <Route path="/posts" component={NewPosts} />
         <Route path="/home" component={Home} />
+        <Route path="/createpost" component={CreatePost} />
       </Switch>
     </div>
   );

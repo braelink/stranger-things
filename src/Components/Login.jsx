@@ -40,7 +40,7 @@ const Form = () => {
 
   return (
     <div>
-      <h1>Please sign in</h1>
+      <h2>Please sign in</h2>
       <form style={formStyle} onSubmit={login}>
         <input
           placeholder="*username"

@@ -3,5 +3,6 @@ import Nav from "./Nav";
 import Home from "./Home";
 import NewPosts from "./NewPosts";
 import Register from "./Register";
+import CreatePost from "./CreatePost";
 
-export { Login, Nav, Home, NewPosts, Register };
+export { Login, Nav, Home, NewPosts, Register, CreatePost };

@@ -16,6 +16,9 @@ const Nav = () => {
       <Link to="/login">
         <button>Login</button>
       </Link>
+      <Link to="/createpost">
+        <button>Create Posts</button>
+      </Link>
 
       {possibleAutos.map((pageName) => (
         <Link key={pageName} to={`/new-posts/${pageName}`}>
